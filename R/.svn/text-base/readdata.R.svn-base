@@ -1,0 +1,11 @@
+full1 = read.csv('../../data/full1.txt')
+full2 = read.csv('../../data/full2.txt')
+full3 = read.csv('../../data/full3.txt')
+c1 = read.table('../../data/data1.txt')
+t1 = read.table('../../data/theory1.txt')
+c2 = read.table('../../data/data2.txt')
+t2 = read.table('../../data/theory2.txt')
+t3 = read.table('../../data/theory3.txt')
+c3 = read.table('../../data/data3.txt')
+
+
