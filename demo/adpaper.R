@@ -1,3 +1,5 @@
+# example calls
+require(fluctuationDomains)
 logistic_curve = function(x){-x*exp(-x*x/2)}
 X11(w=5, h=6.5)
 landscape(logistic_curve, -3, 3)

@@ -1,6 +1,8 @@
 ### try fig parameter to specify location of each plot indepdently.  need new=TRUE to add to an existing plot
 
-
+#' @title results plot
+#' @return a summary plot
+#' @export
 resultsplot = function(){
 
 full1 = read.csv('full.txt')

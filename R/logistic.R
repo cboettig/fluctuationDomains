@@ -1,4 +1,24 @@
-# R function to call the c code simulation
+#' simulate evolution under the logistic branching model
+#' 
+#' @param Xo starting trait
+#' @param Ko carrying capacity
+#' @param SIGMA2_K carrying capacity kernel width
+#' @param SIGMA2_C competition kernel width (wider means no branching)
+#' @param R growth rate
+#' @param MU mutation rate
+#' @param SIGMA2_MU mutation step size
+#' @param MAX_TIME simulation time
+#' @param ENSEMBLES number of replicates
+#' @param Dt sampling time
+#' @param dt step size
+#' @return a data frame with evolved trajectories
+#' @details an R function to call the c code for simulation
+#' @examples
+#' X11(w=7, h=3, xpos=-100)
+#' out = logistic(Xo = 2)
+#' print(out)
+#' @export
+#' @useDynLib fluctuationDomains 
 logistic = function(
 	Xo = 1, 
 	Ko = 1, 

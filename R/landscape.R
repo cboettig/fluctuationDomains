@@ -1,3 +1,15 @@
+#' landscape 
+#' 
+#' plot the adaptive landscapes produced by fluctuationDomains
+#' @param func the adaptive landscape to plot
+#' @param llim lower limit
+#' @param rlim upper limit
+#' @return the landscape plot
+#' @export
+#' @examples
+#' logistic_curve = function(x){-x*exp(-x*x/2)}
+#' X11(w=5, h=6.5)
+#' landscape(logistic_curve, -3, 3)
 landscape = function(func, llim=0, rlim=1){
 
 	par(cex.lab=1.7, lwd=2, mgp=c(2,.4,0) )

@@ -1,2 +1,2 @@
-adpaper  Runs the functions provided (landscape and canonical) and displays their plots.  
-admodels loads the common models for the fitness landscape.  Produces no output.  
+adpaper   Runs the functions provided (landscape and canonical) and displays their plots.  
+admodels  loads the common models for the fitness landscape.  Produces no output.  

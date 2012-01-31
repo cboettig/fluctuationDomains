@@ -1,2 +1,5 @@
-useDynLib(adpaper)
-export(logistic, landscape, pip)
+export(landscape)
+export(logistic)
+export(pip)
+export(resultsplot)
+useDynLib(fluctuationDomains)
