@@ -1,13 +1,15 @@
 Package: fluctuationDomains
 Version: 0.5-0
+Date: 2010
 Title: Fluctuation Domains in Adaptive Evolution
 Description: The package is distributed to complement our paper, Fluctuation
     Domains in Adaptive Evolution.  The package allows other researchers to
     quickly and easily reproduce the results of this paper.  Researchers can
     also easily build upon and extend the simulations and examples provided.
-License: file LICENSE
+License: CC ZERO 1.0 + file LICENSE
 Author: Carl Boettiger, Johnathan Dushoff, Joshua Weitz
 Maintainer: Carl Boettiger <cboettig@ucdavis.edu>
+URL: https://github.com/cboettig/fluctuationDomains
 Collate:
     'landscape.R'
     'logistic.R'
