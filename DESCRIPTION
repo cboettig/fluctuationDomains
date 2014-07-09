@@ -8,7 +8,7 @@ Description: The package is distributed to complement our paper, Fluctuation
     also easily build upon and extend the simulations and examples provided.
 License: CC0
 Author: Carl Boettiger, Johnathan Dushoff, Joshua Weitz
-Maintainer: Carl Boettiger <cboettig@ucdavis.edu>
+Maintainer: Carl Boettiger <cboettig@ucsc.edu>
 URL: https://github.com/cboettig/fluctuationDomains
 Collate:
     'landscape.R'
