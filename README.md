@@ -1,3 +1,6 @@
+[![DOI](https://zenodo.org/badge/2824581.svg)](https://zenodo.org/badge/latestdoi/2824581)
+
+
 Fluctuation Domains in Adaptive	Evolution: 
 An Example of Reproducible Research in Theoretical Ecology and Evolution
 
