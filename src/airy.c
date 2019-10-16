@@ -6,7 +6,7 @@
 
 static int sf_mode[] = { GSL_PREC_DOUBLE, GSL_PREC_SINGLE, GSL_PREC_APPROX } ;
 
-void airy_Ai_e(double *x, int *len, int *mode, double *val, double *err, int *status)
+void airy_Ai_e(const double *x, const int *len, const int *mode, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -19,7 +19,7 @@ void airy_Ai_e(double *x, int *len, int *mode, double *val, double *err, int *st
 	}
 }  
 
-void airy_Bi_e(double *x, int *len, int *mode, double *val, double *err, int *status)
+void airy_Bi_e(const double *x, const int *len, const int *mode, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -31,7 +31,7 @@ void airy_Bi_e(double *x, int *len, int *mode, double *val, double *err, int *st
 	}
 }  
 
-void airy_Ai_scaled_e(double *x, int *len, int *mode, double *val, double *err, int *status)
+void airy_Ai_scaled_e(const double *x, const int *len, const int *mode, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -43,7 +43,7 @@ void airy_Ai_scaled_e(double *x, int *len, int *mode, double *val, double *err, 
 	}
 }   
 
-void airy_Bi_scaled_e(double *x, int *len, int *mode, double *val, double *err, int *status)
+void airy_Bi_scaled_e(const double *x, const int *len, const int *mode, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -55,7 +55,7 @@ void airy_Bi_scaled_e(double *x, int *len, int *mode, double *val, double *err, 
 	}
 }   
 
-void airy_Ai_deriv_e(double *x, int *len, int *mode, double *val, double *err, int *status)
+void airy_Ai_deriv_e(const double *x, const int *len, const int *mode, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -67,7 +67,7 @@ void airy_Ai_deriv_e(double *x, int *len, int *mode, double *val, double *err, i
 	}
 }   
 
-void airy_Bi_deriv_e(double *x, int *len, int *mode, double *val, double *err, int *status)
+void airy_Bi_deriv_e(const double *x, const int *len, const int *mode, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -79,7 +79,7 @@ void airy_Bi_deriv_e(double *x, int *len, int *mode, double *val, double *err, i
 	}
 }   
 
-void airy_Ai_deriv_scaled_e(double *x, int *len, int *mode, double *val, double *err, int *status)
+void airy_Ai_deriv_scaled_e(const double *x, const int *len, const int *mode, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -91,7 +91,7 @@ void airy_Ai_deriv_scaled_e(double *x, int *len, int *mode, double *val, double 
 	}
 }   
 
-void airy_Bi_deriv_scaled_e(double *x, int *len, int *mode, double *val, double *err, int *status)
+void airy_Bi_deriv_scaled_e(const double *x, const int *len, const int *mode, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -103,7 +103,7 @@ void airy_Bi_deriv_scaled_e(double *x, int *len, int *mode, double *val, double 
 	}
 }   
 
-void airy_zero_Ai_e(int *n, int *len, double *val, double *err, int *status)
+void airy_zero_Ai_e(const int *n, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -119,7 +119,7 @@ void airy_zero_Ai_e(int *n, int *len, double *val, double *err, int *status)
 	}
 }
 
-void airy_zero_Bi_e(int *n, int *len, double *val, double *err, int *status)
+void airy_zero_Bi_e(const int *n, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -135,7 +135,7 @@ void airy_zero_Bi_e(int *n, int *len, double *val, double *err, int *status)
 	}
 }
 
-void airy_zero_Ai_deriv_e(int *n, int *len, double *val, double *err, int *status)
+void airy_zero_Ai_deriv_e(const int *n, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -151,7 +151,7 @@ void airy_zero_Ai_deriv_e(int *n, int *len, double *val, double *err, int *statu
 	}
 }
 
-void airy_zero_Bi_deriv_e(int *n, int *len, double *val, double *err, int *status)
+void airy_zero_Bi_deriv_e(const int *n, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
