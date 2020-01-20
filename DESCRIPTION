@@ -16,3 +16,4 @@ Collate:
     'logistic.R'
     'pip.R'
     'resultsplot.R'
+RoxygenNote: 7.0.2

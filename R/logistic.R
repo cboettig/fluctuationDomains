@@ -1,5 +1,5 @@
 #' simulate evolution under the logistic branching model
-#' 
+#'
 #' @param Xo starting trait
 #' @param Ko carrying capacity
 #' @param SIGMA2_K carrying capacity kernel width
@@ -14,16 +14,14 @@
 #' @return a data frame with evolved trajectories
 #' @details an R function to call the c code for simulation
 #' @examples
-#' X11(w=7, h=3, xpos=-100)
 #' out = logistic(Xo = 2)
-#' print(out)
 #' @export
-#' @useDynLib fluctuationDomains 
+#' @useDynLib fluctuationDomains
 logistic = function(
-	Xo = 1, 
-	Ko = 1, 
-	SIGMA2_K = 1, 
-	SIGMA2_C = 1.01, 
+	Xo = 1,
+	Ko = 1,
+	SIGMA2_K = 1,
+	SIGMA2_C = 1.01,
 	R = 10,
 	MU = 1,
 	SIGMA2_MU = 0.0005,
@@ -34,10 +32,10 @@ logistic = function(
 ){
 	.C(
 		"Rlogistic",
-		as.numeric(Xo), 
-		as.numeric(Ko), 
-		as.numeric(SIGMA2_K), 
-		as.numeric(SIGMA2_C), 
+		as.numeric(Xo),
+		as.numeric(Ko),
+		as.numeric(SIGMA2_K),
+		as.numeric(SIGMA2_C),
 		as.numeric(R),
 		as.numeric(MU),
 		as.numeric(SIGMA2_MU),

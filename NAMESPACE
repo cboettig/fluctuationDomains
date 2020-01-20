@@ -3,3 +3,8 @@ export(logistic)
 export(pip)
 export(resultsplot)
 useDynLib(fluctuationDomains)
+importFrom("grDevices", "rgb")
+importFrom("graphics", "abline", "curve", "filled.contour", "layout",
+               "par", "plot", "points", "rect")
+importFrom("stats", "density", "dnorm", "sd")
+importFrom("utils", "read.csv", "read.table")
