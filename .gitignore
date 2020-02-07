@@ -8,3 +8,6 @@ src/*.dll
 rescience/*_cache/*
 rescience/*.txt
 rescience/*.pdf
+data.txt
+full.txt
+theory.txt
