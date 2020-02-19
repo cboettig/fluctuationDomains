@@ -33,10 +33,4 @@ metadata.tex: metadata.yaml
 article.pdf: article.Rmd header.tex suffix.tex bibliography.bib metadata.tex rescience.cls
 	R -e "rmarkdown::render('article.Rmd')"
 
-clean:
-	@latexmk -CA
-	@rm -f *.bbl
-	@rm -f *.run.xml
-  @rm -rf article_cache
-  @rm -f full.txt data.txt theory.txt
-  @rm -rf article.tex article.log
+
