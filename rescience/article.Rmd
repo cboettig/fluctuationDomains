@@ -60,7 +60,7 @@ Running the `logistic()` function provided in the code, I was able to replicate 
 
 Reproducing figure 1 worked directly from the provided code, which merely plots equations derived from a little stochastic calculus as presented in the paper and appendix:
 
-```{r fig1, fig.cap="The three panels of figure 1, showing examples of evolutionary landscapes and the corresponding fluctuation domains for three classic models (logistic, chemostat, branching model). This figure is largely theoretical, and so easily replicates Figure 1 of the original paper.  The first panel showing the logistic model depicts the fluctuation regimes for the model parameters used in the numerical analysis."}
+```{r fig1, fig.width = 5, fig.height = 3, fig.show = "hold", out.extra="", fig.cap="The three panels of figure 1, showing examples of evolutionary landscapes and the corresponding fluctuation domains for three classic models (logistic, chemostat, branching model). This figure is largely theoretical, and so easily replicates Figure 1 of the original paper.  The first panel showing the logistic model depicts the fluctuation regimes for the model parameters used in the numerical analysis."}
 library(fluctuationDomains)
 ## Figure 1 function definitions:
 logistic_curve = function(x){-x*exp(-x*x/2)}
