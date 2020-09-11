@@ -12,11 +12,11 @@ t1 = read.table('theory.txt')
 #points in histogram
 	N=30
 	BY=2
-	ptcolor = "black" 
+	ptcolor = "black"
 	linecolor = ptcolor
 	starcolor = "black"
 	starshape = 19   ## 4 is x, 3 is +, 19 filled circle
-	starsize = 1 
+	starsize = 1
 	freq_ptcolor = ptcolor #starcolor
 	freq_ptshape = 1 #starshape
 	vline = "black"
@@ -42,6 +42,8 @@ t1 = read.table('theory.txt')
 	)
 
 ## Calculations to pick what time to draw histogram and to compute histogram
+	full1[,1] = round(full1[,1]) # sample at integer times
+
 	max1 = which.max(t1$V3)
 	time1 = t1[max1,1]
 	sep = abs(full1[,1] - time1)

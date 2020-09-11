@@ -16,7 +16,7 @@
 
 
 /* Many good algorithms don't need the Jacobian, so we'll just pass a null pointer */
-int *jac = NULL;
+double *jac = NULL;
 
 void
 gslode(void *params, double MAX_TIME, FILE *theory)
@@ -26,7 +26,7 @@ gslode(void *params, double MAX_TIME, FILE *theory)
 	/* Create our ODE system */
 	gsl_odeiv_system sys = {func, jac, DIM, params};
 
-	/* Range of time to simulate*/	
+	/* Range of time to simulate*/
 	double t = 0.0, t1 = MAX_TIME;
 	/* Initial step size, will be modified as needed by adaptive alogorithm */
 	double h = 1e-6;
@@ -49,7 +49,7 @@ gslode(void *params, double MAX_TIME, FILE *theory)
 	 = gsl_odeiv_evolve_alloc (DIM);
 
 	/*dummy to make easy to switch to regular printing */
-	double ti = t1; 
+	double ti = t1;
 	int i;
 
 	/* Uncomment the outer for loop to print *
@@ -75,9 +75,9 @@ gslode(void *params, double MAX_TIME, FILE *theory)
 
 void euler(void *params, double MAX_TIME, FILE *theory){
 	PAR pars = *(PAR *)params;
-	
+
 	double dt = .01;
-	int sample; 
+	int sample;
 
 	double y[DIM] = { pars.Xo, 0.0 };
 	double f[DIM];
@@ -90,9 +90,9 @@ void euler(void *params, double MAX_TIME, FILE *theory){
 			fprintf
 			(
 				theory, "%.6e %.6e %.6e\n",
-				dt*sample, 
-				y[0], 
-				y[1] 
+				dt*sample,
+				y[0],
+				y[1]
 			);
 		}
 		int status = func(t, y, f, &pars);

@@ -1,5 +1,5 @@
-#' landscape 
-#' 
+#' landscape
+#'
 #' plot the adaptive landscapes produced by fluctuationDomains
 #' @param func the adaptive landscape to plot
 #' @param llim lower limit
@@ -8,7 +8,6 @@
 #' @export
 #' @examples
 #' logistic_curve = function(x){-x*exp(-x*x/2)}
-#' X11(w=5, h=6.5)
 #' landscape(logistic_curve, -3, 3)
 landscape = function(func, llim=0, rlim=1){
 
@@ -25,8 +24,8 @@ landscape = function(func, llim=0, rlim=1){
 	integral2 = cumsum( func(x2) )
 
 	## see ?plotmath for symbols
-	plot(x2, integral2, 
-		type="l", 
+	plot(x2, integral2,
+		type="l",
 		ylab=expression(paste( integral( italic(a[1])(y)*dy, 0, italic(x) ) )),
 		xaxt="n",
 		yaxt="n",
@@ -36,16 +35,16 @@ landscape = function(func, llim=0, rlim=1){
 	par( mar=c(5,6,0,2) )
 
 	## plot lower curve
-	curve(func, llim, rlim, 
-		xlab=expression(paste("Trait, ", italic(x))), 
-		ylab=expression( paste("", italic(a[1])(italic(x))  ) ), 
-		yaxt="n" 
+	curve(func, llim, rlim,
+		xlab=expression(paste("Trait, ", italic(x))),
+		ylab=expression( paste("", italic(a[1])(italic(x))  ) ),
+		yaxt="n"
 	)
 	abline(h=0, lty="dashed")
 	maxpt = x2[which.max( func(x2) )]
 	minpt =  x2[which.min( func(x2) )]
 	shade = c(maxpt,minpt)
-	
+
 	bdry = par("usr")
 	## Shading
 	extend = 1.1
@@ -58,10 +57,10 @@ landscape = function(func, llim=0, rlim=1){
 	}
 
 	## plot lower curve
-	curve(func, llim, rlim, 
-		xlab=expression(paste("Trait, ", italic(x))), 
-		ylab=expression( paste("", italic(a[1])(italic(x))  ) ), 
-		yaxt="n", add=T 
+	curve(func, llim, rlim,
+		xlab=expression(paste("Trait, ", italic(x))),
+		ylab=expression( paste("", italic(a[1])(italic(x))  ) ),
+		yaxt="n", add=T
 	)
 	abline(h=0, lty="dashed")
 
