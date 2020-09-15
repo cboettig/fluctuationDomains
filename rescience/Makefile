@@ -8,8 +8,11 @@
 # The first rule in a Makefile is the one executed by default ("make"). It
 # should always be the "all" rule, so that "make" and "make all" are identical.
 
-all: article
+all: install article
 article: article.pdf
+
+install:
+	R CMD build .. && R CMD INSTALL fluctuationDomains*.tar.gz
 
 
 # CUSTOM BUILD RULES

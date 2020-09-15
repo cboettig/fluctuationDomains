@@ -2,6 +2,7 @@
 title: 'Reproducing "Fluctuation Domains"'
 output:
   pdf_document:
+    keep_tex: true
     latex_engine: xelatex
     template: rescience.latex
     includes:
